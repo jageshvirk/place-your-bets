@@ -45,13 +45,13 @@ const Gameplay = (props) => {
           updatedPlayers.push({
             ...player,
             wins: wins + 1,
-            money: money + 20
+            money: money + 50
           });
         } else {
           updatedPlayers.push({
             ...player,
             loses: loses + 1,
-            money: money - 50
+            money: money - 20
           });
         }
       } else {
