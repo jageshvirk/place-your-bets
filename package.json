@@ -27,7 +27,9 @@
       "react-app/jest"
     ],
     "rules": {
-      "import/prefer-default-export": 0
+      "import/prefer-default-export": 0,
+      "react-hooks/exhaustive-deps": 0,
+      "import/no-anonymous-default-export": 0
     }
   },
   "browserslist": {
