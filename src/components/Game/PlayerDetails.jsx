@@ -31,7 +31,7 @@ const PlayerDetails = (props) => {
         name="bet"
         value={bet}
         onChange={onChangePlayerDetail}
-        placeholder="your bet (0 to 6)"
+        placeholder="your bet (1 to 6)"
         type="number"
         min={1}
         max={6}
