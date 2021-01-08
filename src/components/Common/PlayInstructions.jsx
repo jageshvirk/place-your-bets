@@ -13,7 +13,7 @@ const PlayInstructions = (props) => {
         <li>each player will be given 200 cash at the start</li>
         <li>roll the dice</li>
         <li>player who has matching bet, wins the round</li>
-        <li>player gains 20 cash on winning each round but loses 50 cash on losing</li>
+        <li>player gains 50 cash on winning each round but loses 20 cash on losing</li>
         <li>game ends when there remains only one winner</li>
         <h3>hope you enjoy!</h3>
         <Button buttonText="close" onButtonClick={onCloseInstructions} />
