@@ -1,0 +1,54 @@
+.gameplay {
+  text-align: center;
+}
+
+.gameplay h1 {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 2.5rem;
+}
+
+.player {
+  width: 18rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.2rem 0rem;
+  height: 20rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
+.gameplay .opposingBet {
+  margin: 1rem 2.5rem;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.lostPlayer {
+  border-radius: 8px;
+  background: rgba(218, 213, 213, 0.158);
+  font-weight: lighter;
+}
+
+.playerAttribute {
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.playerBet {
+  border: 1px;
+  width: 40%;
+  margin: auto;
+}
+
+.winner {
+  font-size: 2rem;
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.winnerBox .primaryButton {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}

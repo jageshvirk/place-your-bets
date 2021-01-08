@@ -1,0 +1,38 @@
+.game {
+  text-align: center;
+}
+
+.game .primaryButton {
+  display: block;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+}
+
+.game .playerDetails {
+  display: inline-block;
+  margin: 1.5rem;
+}
+
+.game .playerDetails input {
+  margin: 0.5rem;
+  width: 100%;
+}
+
+.playButtonBox .primaryButton {
+  display: inline-block;
+}
+
+.playButtonBox span {
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 1.2rem;
+}
+
+.hint {
+  background: rgba(255, 255, 255, 0.185);
+  font-size: 0.7rem;
+  padding: 0.2rem;
+  width: fit-content;
+  margin: auto;
+  border-radius: 16px;
+}

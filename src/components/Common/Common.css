@@ -1,0 +1,77 @@
+.navbar {
+  margin: 1rem;
+  width: 50%;
+}
+
+.navbar .primaryButton {
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
+.primaryLabel {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.primaryInput {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid double;
+  background: inherit;
+  text-transform: inherit;
+}
+
+.primaryInput:focus {
+  outline: none;
+}
+
+.primaryInput::placeholder {
+  text-transform: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.primaryButton {
+  font: 1rem;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-weight: bold;
+  text-transform: inherit;
+}
+
+.primaryButton:hover {
+  background: white;
+}
+
+.primaryButton:disabled {
+  pointer-events: none;
+  background-color: rgb(218, 213, 213);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.playInstructions {
+  background: rgb(245, 239, 231);
+  z-index: 2;
+  text-align: center;
+  width: 50%;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.playInstructions li {
+  margin: 0.8rem;
+  font-weight: bold;
+  list-style: circle;
+}

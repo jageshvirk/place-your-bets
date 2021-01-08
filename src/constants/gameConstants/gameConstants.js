@@ -1,0 +1,8 @@
+const GAME_CONSTANTS = {
+  MIN_PLAYERS: 2,
+  MAX_PLAYERS: 4,
+  MIN_BET: 1,
+  MAX_BET: 6
+};
+
+export default GAME_CONSTANTS;
