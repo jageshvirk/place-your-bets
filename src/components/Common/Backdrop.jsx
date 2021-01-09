@@ -4,6 +4,7 @@ import './Common.css';
 
 const Backdrop = (props) => {
   const { showBackdrop, onBackdropClick, children } = props;
+
   return showBackdrop ? (
     <div className="backdrop" onClick={onBackdropClick}>
       {children}

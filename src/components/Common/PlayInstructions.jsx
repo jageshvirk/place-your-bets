@@ -4,8 +4,9 @@ import Button from './Button';
 
 const PlayInstructions = (props) => {
   const { onCloseInstructions } = props;
+
   return (
-    <div className="playInstructions">
+    <div className="playInstructions" onClick={(e) => e.stopPropagation()}>
       <ul>
         <li>play with minimum of 2 and max of 4 people</li>
         <li>each player must have a name</li>

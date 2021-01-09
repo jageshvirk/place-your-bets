@@ -16,11 +16,13 @@ const Navbar = () => {
 
   const onCloseInstructions = () => setShowHelp(false);
 
+  const onBackdropClick = () => setShowHelp(false);
+
   return (
     <div className="navbar">
       <Button buttonText="Home" onButtonClick={onButtonClick} />
       <Button buttonText="how to play" onButtonClick={onHelpClick} />
-      <Backdrop showBackdrop={showHelp}>
+      <Backdrop showBackdrop={showHelp} onBackdropClick={onBackdropClick}>
         <PlayInstructions onCloseInstructions={onCloseInstructions} />
       </Backdrop>
     </div>
