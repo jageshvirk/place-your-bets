@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { lazy, Suspense, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { ROUTE_CONSTANTS, GAME_CONSTANTS } from '../../constants';
 import { playerAction } from '../../redux/actions';
-import { Button } from '../Common';
-import PlayerDetails from './PlayerDetails';
+import { Button, Loading } from '../Common';
 import './Game.css';
+import '../Common/Common.css';
+
+const PlayerDetails = lazy(() => import('./PlayerDetails'));
 
 const Game = (props) => {
   const {
@@ -80,9 +82,11 @@ const Game = (props) => {
         />
       </div>
 
-      {players.map((player) => (
-        <PlayerDetails key={player.id} player={player} onChange={onChange} />
-      ))}
+      <Suspense fallback={<Loading />}>
+        {players.map((player) => (
+          <PlayerDetails key={player.id} player={player} onChange={onChange} />
+        ))}
+      </Suspense>
 
       <div className="playButtonBox">
         <Button

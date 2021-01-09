@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Loading } from '.';
 import { ROUTE_CONSTANTS } from '../../constants';
 import Backdrop from './Backdrop';
 import Button from './Button';
-import PlayInstructions from './PlayInstructions';
+
+const PlayInstructions = lazy(() => import('./PlayInstructions'));
 
 const Navbar = () => {
   const [showHelp, setShowHelp] = useState(false);
@@ -23,7 +25,9 @@ const Navbar = () => {
       <Button buttonText="Home" onButtonClick={onButtonClick} />
       <Button buttonText="how to play" onButtonClick={onHelpClick} />
       <Backdrop showBackdrop={showHelp} onBackdropClick={onBackdropClick}>
-        <PlayInstructions onCloseInstructions={onCloseInstructions} />
+        <Suspense fallback={<Loading />}>
+          <PlayInstructions onCloseInstructions={onCloseInstructions} />
+        </Suspense>
       </Backdrop>
     </div>
   );
