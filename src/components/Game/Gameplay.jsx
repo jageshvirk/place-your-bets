@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { ROUTE_CONSTANTS } from '../../constants';
+import { GAME_CONSTANTS, ROUTE_CONSTANTS } from '../../constants';
 import { Button } from '../Common';
 import { getRandomInt } from '../util';
 import './Gameplay.css';
@@ -45,13 +45,13 @@ const Gameplay = (props) => {
           updatedPlayers.push({
             ...player,
             wins: wins + 1,
-            money: money + 20
+            money: money + GAME_CONSTANTS.WIN_MONEY
           });
         } else {
           updatedPlayers.push({
             ...player,
             loses: loses + 1,
-            money: money - 50
+            money: money - GAME_CONSTANTS.LOSS_MONEY
           });
         }
       } else {

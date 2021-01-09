@@ -12,6 +12,8 @@ const Game = (props) => {
     history: { push }
   } = props;
 
+  const { INIT_MONEY, MIN_PLAYERS, MAX_PLAYERS, MIN_BET, MAX_BET } = GAME_CONSTANTS;
+
   const [players, setPlayers] = useState([]);
   const [id, setId] = useState(1);
   const [showTooltip, setShowTooltip] = useState(false);
@@ -31,7 +33,7 @@ const Game = (props) => {
       id,
       playerName: '',
       playerDesc: '',
-      money: 200,
+      money: INIT_MONEY,
       wins: 0,
       loses: 0,
       bet: ''
@@ -54,14 +56,11 @@ const Game = (props) => {
   const noOfPlayers = players.length;
 
   const isPlayButtonDisabled = () => {
-    const noOfPlayersCriteria =
-      noOfPlayers < GAME_CONSTANTS.MIN_PLAYERS || noOfPlayers > GAME_CONSTANTS.MAX_PLAYERS;
+    const noOfPlayersCriteria = noOfPlayers < MIN_PLAYERS || noOfPlayers > MAX_PLAYERS;
 
     const isInputInvalid = !players.every(
       (player) =>
-        !!player.playerName &&
-        Number(player.bet) >= GAME_CONSTANTS.MIN_BET &&
-        Number(player.bet) <= GAME_CONSTANTS.MAX_BET
+        !!player.playerName && Number(player.bet) >= MIN_BET && Number(player.bet) <= MAX_BET
     );
 
     return noOfPlayersCriteria || isInputInvalid;
@@ -75,9 +74,9 @@ const Game = (props) => {
     <div className="game">
       <div className="addPlayerBox">
         <Button
-          buttonText="Add Players (Min 2, Max 4)"
+          buttonText={`Add Players (Min ${MIN_PLAYERS}, Max ${MAX_PLAYERS})`}
           onButtonClick={onAddPlayer}
-          isButtonDisabled={noOfPlayers === GAME_CONSTANTS.MAX_PLAYERS}
+          isButtonDisabled={noOfPlayers === MAX_PLAYERS}
         />
       </div>
 

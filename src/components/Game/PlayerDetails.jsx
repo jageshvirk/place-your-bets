@@ -1,6 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import TextInput from '../Common/TextInput';
+import { GAME_CONSTANTS } from '../../constants';
 
 const PlayerDetails = (props) => {
   const { player, onChange } = props;
@@ -31,10 +32,10 @@ const PlayerDetails = (props) => {
         name="bet"
         value={bet}
         onChange={onChangePlayerDetail}
-        placeholder="your bet (0 to 6)"
+        placeholder={`your bet (${GAME_CONSTANTS.MIN_BET} to ${GAME_CONSTANTS.MAX_BET})`}
         type="number"
-        min={1}
-        max={6}
+        min={GAME_CONSTANTS.MIN_BET}
+        max={GAME_CONSTANTS.MAX_BET}
       />
     </div>
   );

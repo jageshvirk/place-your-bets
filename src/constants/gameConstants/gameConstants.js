@@ -2,7 +2,10 @@ const GAME_CONSTANTS = {
   MIN_PLAYERS: 2,
   MAX_PLAYERS: 4,
   MIN_BET: 1,
-  MAX_BET: 6
+  MAX_BET: 6,
+  WIN_MONEY: 50,
+  LOSS_MONEY: 20,
+  INIT_MONEY: 200
 };
 
 export default GAME_CONSTANTS;
